@@ -1,11 +1,7 @@
-output "minio_console_url" {
-  value = module.storage.minio_url
+output "minio_url" {
+  value = "http://localhost:9001"
 }
 
 output "bucket_names" {
-  value = module.storage.bucket_names
-}
-
-output "postgres_connection" {
-  value = module.database.connection_string
+  value = values(var.buckets)
 }
